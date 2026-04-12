@@ -1,0 +1,24 @@
+# Gradle
+.gradle
+/build
+
+# Local config
+local.properties
+secrets.properties
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# OS
+.DS_Store
+
+# NDK
+.externalNativeBuild
+.cxx
+
+# Logs
+*.log
+
+# Allow default secrets file
+!secrets.defaults.properties
