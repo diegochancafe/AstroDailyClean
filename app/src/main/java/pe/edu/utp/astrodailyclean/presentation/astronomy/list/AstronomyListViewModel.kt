@@ -1,4 +1,4 @@
-package pe.edu.utp.astrodailyclean.presentation.viewmodel
+package pe.edu.utp.astrodailyclean.presentation.astronomy.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -11,7 +11,7 @@ import pe.edu.utp.astrodailyclean.domain.usecase.GetAstronomyPhotosUseCase
 import javax.inject.Inject
 
 @HiltViewModel
-class AstronomyPhotoViewModel @Inject constructor(
+class AstronomyListViewModel @Inject constructor(
     private val getPhotosUseCase: GetAstronomyPhotosUseCase
 ) : ViewModel() {
 

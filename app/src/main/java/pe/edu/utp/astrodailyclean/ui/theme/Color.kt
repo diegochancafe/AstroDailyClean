@@ -1,4 +1,4 @@
-package pe.edu.utp.astrodailyclean.presentation.ui.theme
+package pe.edu.utp.astrodailyclean.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
