@@ -1,5 +1,9 @@
 package pe.edu.utp.astrodailyclean.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class AstronomyPhoto(
     val copyright: String,
     val date: String,
@@ -9,4 +13,4 @@ data class AstronomyPhoto(
     val serviceVersion: String,
     val title: String,
     val url: String
-)
+): Parcelable
