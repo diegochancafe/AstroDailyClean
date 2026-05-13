@@ -22,6 +22,15 @@ secrets = "2.0.1"
 
 coil = "2.6.0"
 
+sonarqube = "7.2.3.7755"
+mockk = "1.13.13"
+kotlinxCoroutinesTest = "1.9.0"
+
+splashscreen = "1.0.1"
+datastore = "1.1.1"
+turbine = "1.1.0"
+detekt = "1.23.6"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -57,6 +66,14 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 # Coil
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
+# Testing
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -65,3 +82,5 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets"}
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize" }
+sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

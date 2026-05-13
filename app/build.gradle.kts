@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.detekt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.secrets)
@@ -29,7 +30,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -46,8 +47,14 @@ android {
     }
 }
 
+
 kotlin {
     jvmToolchain(17)
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
 }
 
 dependencies {
@@ -76,7 +83,23 @@ dependencies {
     // Coil
     implementation(libs.coil.compose)
 
+    // Splash Screen
+    implementation(libs.androidx.core.splashscreen)
+
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
+
+    // Testing
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    // Flow testing
+    testImplementation(libs.turbine)
+
     testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

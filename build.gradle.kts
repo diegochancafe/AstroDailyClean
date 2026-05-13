@@ -5,4 +5,14 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.sonarqube)
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "app-astro-daily-clean")
+        property("sonar.projectName", "AppAstroDailyClean")
+        property("sonar.host.url", "http://localhost:9000")
+        property("sonar.login", project.findProperty("sonar.login") ?: "")
+    }
 }
