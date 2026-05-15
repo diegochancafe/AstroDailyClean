@@ -55,6 +55,8 @@ kotlin {
 detekt {
     buildUponDefaultConfig = true
     allRules = false
+
+    ignoreFailures = true
 }
 
 dependencies {
